@@ -28,7 +28,7 @@ class TestGenerateAndCheckAlert(unittest.TestCase):
         self.assertEqual(title, "Sample page")
 
 
-   def test_generate_and_check_alert(self):
+    def test_generate_and_check_alert(self):
         try:
             # Clica no botão generate
             generate_button = self.driver.find_element(By.NAME, "generate")
