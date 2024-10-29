@@ -65,7 +65,7 @@ class TestGenerateAndCheckAlert(unittest.TestCase):
     def verify_result_message(self, code):
         # Verifica se a mensagem está com o código gerado
         result_message = self.driver.find_element(By.ID, "result").text
-        expected_message = f"It works! {code}!"
+        expected_message = f"It workls! {code}!"
         self.assertEqual(result_message, expected_message)
 
     @classmethod
