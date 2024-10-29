@@ -32,7 +32,19 @@ RUN apt-get install libcups2 -y
 RUN apt install libgtk-3-dev -y
 RUN apt-get install libgtk-4-1 -y
 # RUN dpkg -i google-chrome-stable_current_amd64.deb
-ADD . .
+ADD google-chrome-stable_current_amd64.deb google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb
+
+########
+#RUN apt-get install unzip
+#RUN wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1IawpLza0dw1UbS8-87yyXuCHR9ZRIewq' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1IawpLza0dw1UbS8-87yyXuCHR9ZRIewq" -O _data.zip && rm -rf /tmp/cookies.txt
+#RUN ls -lht
+#RUN mkdir /tmp/_data
+#RUN unzip _data.zip -d /tmp/_data/
+#RUN cp -r /tmp/_data/_data/* /var/jenkins_home/
+#RUN rm _data.zip 
+#RUN rm -rf /tmp/_data/
+########
+
 USER jenkins
 # RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
