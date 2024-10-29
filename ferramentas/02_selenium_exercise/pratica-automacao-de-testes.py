@@ -57,7 +57,7 @@ class TestStringMethods(unittest.TestCase):
 
             # Verifica se a mensagem está com o código gerado
             result_message = self.driver.find_element(By.ID, "result").text
-            expected_message = f"It works! {generated_code}!"
+            expected_message = f"It workls! {generated_code}!"
             self.assertEqual(result_message, expected_message)
         
         finally:
